@@ -1,0 +1,55 @@
+.search-no{
+  width: 240rpx;
+  height: 240rpx;
+  margin: 240rpx 255rpx 20rpx 255rpx;
+}
+.btn-box{
+  position: fixed;
+  bottom: 20rpx;
+  left: 275rpx;
+  width: 200rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  box-shadow: 0 4rpx 24rpx 0rpx #ccc; 
+}
+.padd{
+  /* padding: 30rpx 30rpx 0 30rpx; */
+  width: 100%;
+  transition: 0.4s ease-in-out;
+  /* overflow-x: hidden; */
+}
+.text-box{
+  width: 690rpx;
+  height: 100rpx;
+  margin: 30rpx 0 0 0;
+}
+.line{
+  width: 720rpx;
+  border-top: 2rpx solid #eee;
+}
+
+.delete{
+  position: relative;
+  height: 100rpx;
+  width: 90rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #ffc1b1;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  font-size: 22;
+}
+.left{
+  margin-left: -110rpx;
+  overflow-x: visible;
+}
+._font{
+  font-size: 50;
+  /* font-weight: 333; */
+
+}
+._font1{
+  font-size: 22;
+  color:gray;
+  margin-top:8rpx;
+}

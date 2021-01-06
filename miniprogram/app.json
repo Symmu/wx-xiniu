@@ -1,0 +1,47 @@
+{
+  "pages": [    
+    "pages/3imagess/index",
+    "pages/2imagess/index",
+    "pages/1imagess/index",
+    "pages/index/index",
+    "pages/all_t/my/my",
+    "pages/person/person",
+    "pages/all_t/upload/upload",
+    "pages/all_t/news/news",
+    "pages/Tools/Tools",
+    "pages/all_t/S_win/S_win",
+    "pages/all_t/constellation/constellation",
+    "pages/all_t/cons-detail/cons-detail",
+    "pages/all_t/detail/detail",
+    "pages/all_t/body/body",
+    "pages/all_t/memo/memo",
+    "pages/all_t/newMemo/newMemo"
+  ],
+  "window": {
+    "backgroundColor": "#cc9999",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8AF9C",
+    "navigationBarTitleText": "犀牛工具",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#F8AF9C",
+    "position":"top",
+    "selectedColor":"green",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/Tools/Tools",
+        "text": "工具"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的"
+      }
+    ]},
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

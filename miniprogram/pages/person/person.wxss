@@ -1,0 +1,42 @@
+.view{
+  width: 100%;
+  position: absolute;
+}
+.center{
+  border-radius: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 150rpx;
+  height: 150rpx;
+  display:flex;
+  justify-content:center;
+}
+.userPic{
+  border-radius: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 150rpx;
+  height: 150rpx;
+  display:flex;
+  justify-content:center;
+}
+.btn{
+  margin-top:220rpx;
+  box-shadow: 0 6rpx 25rpx 2rpx #e3dede;
+  color: white;
+  margin-bottom: 13rpx;
+}
+.ima{
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .index{
+  margin-left: 84rpx; 
+}
+.pic{
+  margin-left: 84rpx;
+  justify-content:center;
+} */

@@ -1,0 +1,9 @@
+.hengpaibuju{
+  flex-direction:row;
+  display:flex;
+  /* justify-content: center; */
+}
+.ima{
+  height:240rpx;
+  width:240rpx;
+}

@@ -1,0 +1,5 @@
+<!--pages/3imagess/index.wxml-->
+<text>pages/3imagess/index.wxml</text>
+<view wx:for="{{imageList}}">
+  <image src="{{item.fileID}}" mode="aspectFill" data-fileID="{{item.fileID}}" bindtap="huoqu"/>
+</view>

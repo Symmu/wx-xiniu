@@ -1,0 +1,7 @@
+<image class="bg-img" src='../../../images/background.png' mode='aspectFill'></image>
+<view class="ima">
+  <block wx:for="{{fuzhi}}">
+    <image src="{{item.fileID}}"mode='aspectFit'></image>
+    <button  class="btn"bindtap="onRemove"  data-fd="{{item.fileID}}"> 删除</button>
+  </block>
+</view>

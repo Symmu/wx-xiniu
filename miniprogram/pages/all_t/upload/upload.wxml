@@ -1,0 +1,26 @@
+<!--pages/upload/upload.wxml-->
+<image class="bg-img" src='../../../images/background.png' mode='aspectFill' style="position: fixed;"></image>
+ <!-- 上传图片 -->
+ <view class="view">
+
+     <view class="uploader-text" bindtap="doUpload" >
+       <text class="uploadimg" >点击上传图片</text>
+      </view>
+      <view style="position:fixed;bottom:0">
+        <button class="btn1" bindtap="shuaxin" ><text style="color:white">上传后没有看到图片？请点击我一下</text></button>
+      </view>
+    <!-- <view class="uploader">
+      <view class="uploader-text" bindtap="onRemove" >
+        <text class="uploadimg" >删除图片</text>
+      </view>
+    </view> -->
+    <view class="view1"  style="flex-dircetion:row;display:flex;flex-wrap:wrap" mode="center">
+      <view wx:for="{{imgUrls}}" >
+       <image src="{{item.fileID}}"  class="viewimage" bindtap="b_ima" mode='widthFix'/>
+      </view>
+    </view>
+ 
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>

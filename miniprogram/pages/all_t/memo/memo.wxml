@@ -1,0 +1,29 @@
+<image class="bg-img" src='../../../images/background.png' mode='aspectFill'style="position: fixed;"></image>
+<view style="position:absolute">
+
+  <!-- 缺省图片 -->
+  <view wx:if="{{contentArr == ''}}">
+    <image src="../../../images/bwl.png" class="search-no"></image>
+    <view style="display:flex; justify-content:center;">没有找到你的备忘录呀~</view>
+  </view>
+  
+  <!-- 新建按钮 -->
+  <view class='btn-box' bindtap='addNew'>
+    <view style='line-height:54rpx;'style="display:flex; justify-content:center;color:#ffffff">+</view>
+    <view style="display:flex; justify-content:center;line-height:28rpx;color:#ffffff">新建</view>
+  </view>
+  
+  <!-- 备忘录数据 -->
+  <view wx:for="{{contentArr}}" bindtap='editContent' data-index='{{index}}'>
+    <view class="padd {{index == tapIndex && sliding == 0?'left':''}}" bindlongpress='longTapDelete' bindtouchstart='touchS' bindtouchmove='touchM' data-index='{{index}}'>
+      <view class='text-box'>
+        <view class='_font'>{{item.content}}</view>
+      <view class='_font1' style='margin-top:5rpx;'>{{item.date}}</view>
+      
+    </view>
+    <view class='line'></view>
+    <view class="delete  {{index == tapIndex && sliding == 0?'delete-left':''}}" data-index='{{index}}' bindtap='deleteContent'>删除</view>
+  </view>
+  
+</view>
+</view>

@@ -1,0 +1,9 @@
+<image class="bg-img" src='../../../images/background.png' mode='aspectFill'style="position: fixed;"></image>
+
+<form bindsubmit='saveContent' style="position:absolute">
+  <text class="_font">{{time}}</text>
+  <textarea auto-focus="true" name="content" value="{{editObj.content?editObj.content:''}}"></textarea>
+  <view class="btn1">
+    <button class='btn-save' form-type='submit'plain="true">保存</button>
+  </view>
+</form>

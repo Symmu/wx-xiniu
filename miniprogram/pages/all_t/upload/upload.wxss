@@ -1,0 +1,41 @@
+/* pages/upload/upload.wxss */
+
+.uploadimg{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  border: 5rpx #ccc solid;
+  box-shadow: 0 6rpx 30rpx 2rpx #e3dede;
+  color: white;
+}
+.view{
+  position: absolute;
+}
+.view1 {
+  display: flex;
+  flex-wrap: wrap;     /*是否换行*/
+  justify-content: space-between;  /*主轴上的子元素排列方式，先两边贴边，再平分剩余空间 */
+  align-content: space-around;     /*侧轴上的子元素排列方式，子项在侧轴平分剩余空间 */
+  width: 95%;
+  padding: 0 10rpx;
+  margin: 135rpx auto 0;
+  /* margin-bottom: 0; */
+}
+.view1 image {
+  margin-top: 10rpx;
+  width: 350rpx;
+  height: 500rpx;
+  box-sizing: border-box;    /*使内外边距不再撑大盒子*/
+}
+
+.btn1 {
+  width: 100% !important; 
+  margin-top: 0;
+  color: #005AA7;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

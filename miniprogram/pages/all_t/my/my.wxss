@@ -1,0 +1,13 @@
+/* pages/my/my.wxss */
+.btn{
+  box-shadow: 0 6rpx 30rpx 2rpx #e3dede;
+  color: white;
+}
+.ima{
+  width: 100%;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

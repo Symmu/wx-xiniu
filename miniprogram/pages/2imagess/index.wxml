@@ -1,0 +1,57 @@
+<view class='indexcontainer'>
+  <!-- 顶部推荐图片轮播 -->
+  <view class='selection'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imageList}}" wx:key="*this">
+          <swiper-item> 
+            <image src="{{item.fileID}}" class="slide-image" mode='aspectFill' />
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+  <!-- 第二部分-->
+  <view class='selection'>
+    <!-- 头部文字 -->
+    <view class="header">
+      <text style='margin-left: 5px;'>英杰之诗</text>
+      <text class='all'>英雄的回忆</text>
+    </view>
+    <!-- 内容 -->
+    <view class='content'>
+      <view class='content-item' wx:for="{{imageList}}" wx:key="url" wx:for-item="item">
+        <!-- 图片 -->
+        <image src="{{item.fileID}}" class="slide-image" mode='aspectFill'/>
+        <!-- 图片上的文字说明 -->
+        <view class='content-item-title'>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 第三部分 -->
+  <view class='selection'>
+    <!-- 头部文字 -->
+    <view class="header">
+      <text style='margin-left: 5px;'>广告位信息</text>
+      <text class='all'>户外</text>
+    </view>
+    <!-- 内容 --> 
+    <view class='list-item' wx:for="{{imageList}}" wx:key="url" wx:for-item="item">
+      <!-- 文章图片 -->
+      <view class='list-item-image'>
+        <image src='{{item.fileID}}'  class="slide-image" mode='aspectFill'></image>
+        <!-- 作者头像 -->
+        <image src='{{item.head}}'  class="avatar" mode='scaleToFill'></image>
+      </view>
+      <!-- 文章内容 -->
+      <view class='list-item-text'>
+        <view class='list-item-text-title'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='list-item-text-context' >
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
