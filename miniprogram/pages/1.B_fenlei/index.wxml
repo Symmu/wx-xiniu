@@ -1,0 +1,10 @@
+<!--pages/1.1.1fenlei/index.wxml-->
+<text>pages/1.1.1fenlei/index.wxml</text>
+<view>
+  <block>
+    <image src="{{index.image}}"mode="aspectFill"></image>
+    <text>{{index.content}}</text>
+  </block>
+</view>
+<view>
+</view>

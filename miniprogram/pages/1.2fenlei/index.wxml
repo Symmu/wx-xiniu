@@ -1,0 +1,14 @@
+<!--pages/1.2fenlei/index.wxml-->
+<text>pages/1.2fenlei/index.wxml</text>
+<view>
+<block wx:for="{{alllist}}" wx:key="index_images">
+  <block wx:for="{{item}}" wx:key="index_item">
+    <!-- 图片 -->
+    <image src="{{item.image}}" mode='aspectFit'></image>
+    <!-- 文字内容 -->
+    <view class='list-item-text-context'>
+      <text>{{item.content}}</text>
+    </view>
+  </block>
+  </block>
+</view>

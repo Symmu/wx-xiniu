@@ -1,0 +1,40 @@
+<!-- 实现左右联动效果 -->
+<view class="link">
+	<!-- 左边 -->
+	<scroll-view class="left" scroll-y scroll-with-animation scroll-top="{{scrollTops}}">
+		<view 
+		class="item {{tabCur===index?'active':''}}" 
+		wx:for="{{alllist}}" 
+		wx:key="index" 
+		data-index="{{index}}" 
+		bindtap="tabNav">
+		<text>{{item[0].type}}</text>
+	</view>
+	</scroll-view>
+
+	<!-- 右边 -->
+	<scroll-view class="right" scroll-y scroll-with-animation scroll-into-view="scroll-{{rightCur}}" bindscroll="scrollLink">
+		<!-- 重点： id="scroll-{{index}}"  这个必须要有 不然实现不了左边联动右边的效果-->
+		<view wx:for="{{alllist}}" wx:key="index" class="right-cont" id="scroll-{{index}}">
+			<block wx:for="{{item}}" wx:key="index" >
+			<view class="title">{{item.difference}}</view>
+			<!-- <navigator url="/pages/1.2fenlei/index?_id={{item._id}}"> -->
+				<view bindtap="navigator" hover-class="navigator-hover" data-item="{{item}}" >
+			<!-- 内容 -->
+			<view class="content">
+				<view class="list-item">
+					<text>{{item.content}}</text>
+				</view>
+			</view>
+			<!-- 图片 -->
+			<view class="ima">
+				<!-- <view class="list-item" wx:for="{{item.images}}" wx:key="{{indexs}}" wx:for-index="indexs" wx:for-item="items"> -->
+					<image src="{{item.image}}" mode="aspectFill"></image>
+				<!-- </view> -->
+			</view>
+		</view>
+		<!-- </navigator> -->
+		</block>
+		</view>
+	</scroll-view>
+</view>

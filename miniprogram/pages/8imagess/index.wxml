@@ -1,0 +1,21 @@
+<!--pages/8imagess/index.wxml-->
+<view>
+
+  <block wx:for="{{images}}" wx:key="index_images">
+    <!-- 图片 -->
+    <image src="{{item.fileID}}" mode='aspectFit'></image>
+    <!-- 文字内容 -->
+    <view class='list-item-text-context'>
+      <text>{{item.content}}</text>
+    </view>
+  </block>
+</view>
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="800" circular="true">
+  <block wx:for="{{images}}" wx:key="index_item">
+    <block wx:for="{{item.images}}" wx:key="item">
+      <swiper-item data-index="{{item}}">
+        <image src="{{item}}" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </block>
+</swiper>

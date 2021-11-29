@@ -1,0 +1,12 @@
+<view >
+　　　　<button   class="asd" 
+mode="aspectFit" 
+bindtap='nophonefull' 
+bindlongtap="bingLongTap" 
+bindtouchstart="touchStart" 
+bindtouchend="touchEnd" >点击</button>
+
+</view>
+<view style="margin:0 auto;">
+  　　<text wx:if="{{isShow}}">电话号码</text>
+</view>

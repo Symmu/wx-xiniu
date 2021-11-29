@@ -1,0 +1,27 @@
+<!--pages/category/category.wxml-->
+<view class="container">
+  <scroll-view class='nav_left' scroll-y='true'>
+    <block wx:for="{{cateItems}}" wx:key="{{index}}">
+      <view class="nav_left_items {{curNav==item.id?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.id}}">{{item.difference}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view class="nav_right" scroll-y="true">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{cateItems[curIndex].images.length>0}}">
+      <block wx:for="{{cateItems[curIndex].images}}" wx:key="{{index}}">
+        <view class="nav_right_items">
+        <!--界面跳转 -->
+          <navigator url="*">
+            <image src="{{item}}"mode="aspectFill"></image>
+          </navigator>
+        </view>
+      </block>
+      
+    </view>
+    <!--如果无数据，则显示数据-->
+    <view class="nocate" wx:else>
+      <image src="../../images/close.png"></image>
+      <text>该分类暂无数据</text>
+    </view>
+  </scroll-view>
+</view>

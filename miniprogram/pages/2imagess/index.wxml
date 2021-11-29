@@ -32,7 +32,7 @@
   <view class='selection'>
     <!-- 头部文字 -->
     <view class="header">
-      <text style='margin-left: 5px;'>广告位信息</text>
+      <text style='margin-left: 5px;'wx:for="{{imageList}}">{{item.content}}</text>
       <text class='all'>户外</text>
     </view>
     <!-- 内容 --> 

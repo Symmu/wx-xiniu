@@ -1,0 +1,55 @@
+<!--pages/4imagess/index.wxml-->
+<text>pages/4imagess/index.wxml</text>
+<!-- 第一部分，标题内容 -->
+<!-- <view wx:for="{{UserList}}">
+  <block wx:if="{{item.C}}">
+      <text>{{item.name}}</text>
+  </block>
+</view> -->
+<!-- <text>{{m1.filter(UserList)}}</text> -->
+
+<!-- 第二部分，内容展示(图片，简介) -->
+<view wx:for="{{UserList}}" wx:key="*this">
+ 
+<block wx:if="{{item.a}}">
+  <block wx:if="{{item.C}}">
+      <text style="margin:49rpx">{{item.name}}</text>
+  </block>
+<!-- <text style="margin:160rpx">{{item.contont}}</text> -->
+  <image src="{{item.ima}}" mode="widthFix"></image>
+</block>
+  
+</view>
+
+<!-- <view wx:for="{{UserList}}"wx:key="*this">
+  <block wx:if="{{item.c}}">
+    <view class="{{  {{m1.filter(UserList)}}== name  ?'portrait-container':'landscape-container'}}"> </view>
+    <block wx:if="{{item.name}}">
+    <text>{{m1.filter(UserList)}}</text>
+    </block>
+  </block>
+</view> -->
+
+
+
+
+<wxs module="m1">
+  // 定义一个新数组
+var newArr = [];
+var filter = function( array ){
+        // 遍历传进来的数组
+        for(var i=0; i<array.length; i++){
+            // 如果newArr里没有array[i]
+            if( newArr.indexOf(array[i].name) == -1 ){
+                // 把array[i]传进新数组
+                newArr.push(array[i].name);
+            }   
+        }
+        // 返回新数组
+        return newArr;
+    }
+module.exports = {
+  filter: filter,
+  newArr: newArr
+};
+</wxs>

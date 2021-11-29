@@ -1,0 +1,31 @@
+<image class="bg-img" src='../../images/background.png' mode='aspectFill'></image>
+<view class="swiper__wrap">
+  <swiper previous-margin="40rpx" next-margin="40rpx" autoplay circular interval="4000" duration="500" bindchange="swiperIdxHandle">
+      <block wx:for="{{banner}}" wx:key="index">
+        <swiper-item bindtap="ViewImage" data-index="{{item.fileID}}">
+           <!-- <view style="background-color: {{ item.bgcolor }}" class="slide-image {{ index == currentDot ? 'is-actived' : '' }}"></view> -->
+          <image src="{{item.fileID}}" mode="aspectFill" class="slide-image {{ index == currentDot ? 'is-actived' : '' }}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 状态按钮 -->
+    <view class='indicator-wrapper'>
+      <text wx:for="{{banner}}" wx:key="index" class="{{index == currentDot ? 'dotfocus': ''}}"></text>
+    </view>
+</view>
+
+<button class='btn1' bindtap="b_ima">
+    <image class='btnImg' src='../../images/cq.png'></image>
+    <view>编辑轮播图，我也来！！！！！</view>
+ </button>
+ 
+ <button bindtap="shuaxin" >
+ <view style="position:relavtive;">
+   <text style="color:white">上传后没有看到图片？请点击我一下</text>
+  </view>
+</button>
+<view style="position:absolute;display:flex;position: absolute;left: 0;bottom: 0;color:white">
+    <navigator url="">
+      如果有什么问题请咨询作者....后续版本尽请期待！！！！
+    </navigator>
+</view>

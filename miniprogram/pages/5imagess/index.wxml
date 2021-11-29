@@ -1,0 +1,3 @@
+<!--pages/5imagess/index.wxml-->
+<text>pages/5imagess/index.wxml</text>
+<button bindtap="xianshi">发送数据</button>

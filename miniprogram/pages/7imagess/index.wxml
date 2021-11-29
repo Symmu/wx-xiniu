@@ -1,0 +1,11 @@
+<!--pages/7imagess/index.wxml-->
+<text>pages/7imagess/index.wxml</text>
+<button bindtap="onFind" class="btn">获取记录</button>
+
+<view wx:for="{{arrayList}}" wx:key="index">
+  <view class="index"> 图片：{{index+1}}</view>
+  <navigator url="/pages/8imagess/index?fileID={{item.fileID}}">
+      <image class="pic" src="{{item.fileID}}"mode='aspectFit'></image>
+  </navigator>
+</view>
+

@@ -1,0 +1,81 @@
+.link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left {
+  /* width: 220rpx; */
+  width: auto;
+  /* 这里的高度可以写也可以不写，效果还是可以实现的，不过最好还是写上吧 */
+  height: 100vh;
+  background-color: rgb(229, 243, 243);
+  text-align: center;
+  color: #333;
+}
+
+.left .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140rpx;
+  height:120rpx;
+  line-height: 20px;
+  font-size: 34rpx;
+
+}
+
+.active {
+  /*点击是产生的样式*/
+  /* width: 164rpx; */
+  background-color: tomato;
+  color: #fff;
+}
+
+.right {
+  /* 这里的高度可写也可不写，效果还是可以实现的，不过最好还是写上吧 */
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 0 13rpx;/*13rpx*/
+}
+
+.right-cont {
+  /* width: 550rpx; */
+  /* width: 600rpx; */
+  width: 572rpx;
+  margin-right: 25rpx;
+/* 框线*/
+  padding-bottom: 30rpx;/*480rpx*/
+  border-bottom: 1rpx solid #ccc;
+}
+
+.title {
+  text-align: center;
+  font-size: 50rpx;/*36rpx*/
+  color: #333;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+
+/* .content {
+  padding: 0 5rpx 0 20rpx;
+} */
+.ima{
+  padding: 20rpx 20rpx 20rpx 0;
+  /* width: 1rpx;
+  padding-top: 20rpx; */
+  /* width: 100%;
+  height: 300rpx;
+  position: relative; */
+}
+.list-item{
+  /* height: 300rpx;
+  position: relative; */
+  font-size: 40rpx;/*32rpx; */
+  color: rgb(105, 105, 105);/*#333*/
+  font-style: italic;
+  line-height: 43rpx;
+  text-indent: 2em;
+  text-align: justify;
+  /* text-align-last: justify; */
+}

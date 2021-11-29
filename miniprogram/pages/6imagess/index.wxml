@@ -1,0 +1,14 @@
+<!--pages/6imagess/index.wxml-->
+<text style="margin:0 auto;">接受数据</text>
+<!-- <view wx:for="{{arrayList}}"wx:key="index"> -->
+  
+    <!-- <text>{{item}}</text> -->
+    <!-- <image src="{{item}}"mode="widthFix"></image> -->
+  <!-- <block wx:for="{{item.images}}">
+    <image src="{{item}}"mode="widthFix"></image>
+  </block> -->
+<!-- </view> -->
+
+<swiper wx:for="{{arrayList}}">
+    <swiper-item>{{item}}</swiper-item>
+  </swiper>

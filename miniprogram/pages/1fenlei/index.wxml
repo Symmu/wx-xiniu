@@ -1,0 +1,31 @@
+<!--pages/1fenlei/index.wxml-->
+<text>pages/1fenlei/index.wxml</text>
+<view wx:for="{{alllist}}" wx:key="alllist">
+  {{index}}:{{item[0].type}}
+  <block wx:for="{{item}}" wx:key="item">
+    <view>
+      <text>{{item.difference}}</text>
+      <!-- <view wx:for="{{item.differences}}"wx:key="differences">{{item}}</view> -->
+      <!-- <view wx:for="{{item.images}}"wx:key="images"> -->
+        <!-- <image src="{{item.image}}"mode="aspectFill"></image> -->
+      <!-- </view> -->
+      <!-- <image wx:for="{{fun.imgPathSplit(item.image)}}" wx:key="*this" mode="aspectFill" src="{{item}}"></image> -->
+      <!-- <text>{{item.content}}</text> -->
+    </view>
+  </block>
+</view>
+
+<wxs module="fun"> module.exports = { imgPathSplit: function(s) { if (s) return s.split(":"); } }</wxs>
+
+<!-- <view wx:for="{{bus_advertising_list}}" wx:key="bus">
+  <view>
+    bus_advertising_list:
+    {{item.type}}
+  </view>
+</view>
+<view wx:for="{{outdoor_advertsing_list}}" wx:key="outdoor">
+  <view>
+    outdoor_advertsing_list:
+    {{item.type}}
+  </view>
+</view> -->

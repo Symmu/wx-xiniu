@@ -1,5 +1,35 @@
+多表联查
+
+
 <!--pages/3imagess/index.wxml-->
 <text>pages/3imagess/index.wxml</text>
-<view wx:for="{{imageList}}">
+<!-- <view wx:for="{{imageList}}">
   <image src="{{item.fileID}}" mode="aspectFill" data-fileID="{{item.fileID}}" bindtap="huoqu"/>
+</view> -->
+
+
+<!-- <view wx:for="{{busList}}" wx:key="busList_index">
+    <text>{{item.title}}</text>
+    <view wx:for="{{item.bus_cenxi_list}}"wx:key="bus_cenxi_list_index">
+      <image src="{{item.images}}" mode="widthFix"></image>
+    </view>
+    <view wx:for="{{item.bus_longxu_list}}"wx:key="bus_longxu_list_index">
+      <image src="{{item.images}}" mode="widthFix"></image>
+    </view>
+</view> -->
+<view>
+  
+<view wx:for="{{bus_cenxi_list}}"wx:key="bus_cenxi_list_index">
+  <view><text>{{item.title}}</text></view>
+  <view wx:for="{{item.images}}"wx:key="images_index">
+    <image src="{{item}}" mode="widthFix"></image>
+  </view>
+</view>
+
+<view wx:for="{{bus_longxu_list}}"wx:key="bus_longxu_list_index">
+  <view><text>{{item.title}}</text></view>
+  <view wx:for="{{item.images}}"wx:key="images_index">
+    <image src="{{item}}" mode="widthFix"></image>
+  </view>
+</view>
 </view>

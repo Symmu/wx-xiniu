@@ -1,9 +1,15 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
+cloud.init({
+  env: "jzs-mxoen",
 
-cloud.init()
-
-// 云函数入口函数
+})
+const db = cloud.database()
 exports.main = async (event, context) => {
-  return cloud.database().collection("image").get();
+  try {
+    // return await db.collection('image').doc(fileID).remove()
+     return await db.collection(event.collection).get()
+  } catch(e) {
+    console.error(e)
+  }
 }

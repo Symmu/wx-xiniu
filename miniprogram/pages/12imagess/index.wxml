@@ -1,0 +1,31 @@
+<view class="page">
+<!-- 左侧滚动栏 -->
+<view class='under_line'></view>
+<view class="body">
+<view style='float: left' class='left'>
+ <scroll-view scroll-y scroll-with-animation scroll-left="{{scrollLength}}" class='scrollY'  style='height: {{winHeight}}px'>
+  <view class='all clear'>
+   <block wx:key="tabs" wx:for="{{tabs}}">
+    <view bindtap='jumpIndex' data-menuindex='{{index}}'data-anchor='{{item.anchor}}'>
+     <view class="text-style {{indexId==index?' activeView':''}}">
+      <text class="{{indexId==index?'active1':''}}">{{item.title}}</text>
+     </view>
+    </view>
+   </block>
+  </view>
+ </scroll-view>
+</view>
+<view class="right" style='height: {{winHeight}}px'>
+<scroll-view scroll-y scroll-with-animation scroll-left="{{scrollLength}}" bindscroll="scrollToLeft" scroll-into-view="{{toTitle}}" class='scrollRight' style='height: {{winHeight}}px'>
+  <block wx:key="tabs" wx:for="{{tabs}}">
+  <view id="view-{{item.anchor}}">
+     <view class="title" id="title-{{item.anchor}}">{{item.title}}</view>
+     <view class="orders" wx:for="{{tabsList[item.anchor]}}">
+      <template is="cateringItem" data="{{...item}}" />
+     </view>
+    </view>
+  </block>
+ </scroll-view>
+ </view>
+</view>
+</view>

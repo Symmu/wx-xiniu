@@ -5,3 +5,13 @@
     <button  class="btn"bindtap="onRemove"  data-fd="{{item.fileID}}"> 删除</button>
   </block>
 </view>
+
+<swiper indicator-dots="true" autoplay="true" interval="3000"duration="800" circular="true">
+    <block wx:for="{{fuzhi}}" wx:key="index">
+      <block wx:for="{{item.images}}">
+          <swiper-item data-index="{{item}}">
+          <image src="{{item}}"mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </block>
+</swiper>
